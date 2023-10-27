@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'verif.dart';
 
 class OTPScreen extends StatelessWidget {
   const OTPScreen({Key? key});
@@ -82,7 +83,7 @@ class OTPScreen extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(builder: (context) {
-                          return OTPScreen();
+                          return VerifScreen();
                         }),
                       );
                     },
