@@ -22,10 +22,14 @@ if (flutterVersionName == null) {
     flutterVersionName = '1.0'
 }
 
+
+
 android {
     namespace "com.example.alpha"
     compileSdkVersion flutter.compileSdkVersion
     ndkVersion flutter.ndkVersion
+    
+     
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
@@ -39,7 +43,7 @@ android {
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
     }
-
+    
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
         applicationId "com.example.alpha"
@@ -49,6 +53,7 @@ android {
         targetSdkVersion flutter.targetSdkVersion
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
+        minSdkVersion 20
     }
 
     buildTypes {
@@ -59,6 +64,8 @@ android {
         }
     }
 }
+
+  
 
 flutter {
     source '../..'

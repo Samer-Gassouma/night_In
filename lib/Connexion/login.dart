@@ -11,6 +11,7 @@ class LoginScreen extends StatefulWidget {
 class _LoginScreenState extends State<LoginScreen> {
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -41,7 +42,7 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
           ),
           Positioned(
-            top: 446,
+            bottom: 0,
             left: 0,
             child: Container(
               width: 400,
@@ -58,9 +59,7 @@ class _LoginScreenState extends State<LoginScreen> {
               textDirection: TextDirection.ltr,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const SizedBox(
-                  height: 480,
-                ),
+                const SizedBox(height: 550),
                 TextField(
                   controller: _emailController,
                   textAlign: TextAlign.center,

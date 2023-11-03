@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'IDVerify.dart';
 
 class VerifScreen extends StatelessWidget {
   const VerifScreen({Key? key});
@@ -112,7 +113,7 @@ class VerifScreen extends StatelessWidget {
                   'Il faut que :',
                   textAlign: TextAlign.left,
                   style: TextStyle(
-                    color: Color(0xFF393939),
+                    color: Color.fromARGB(255, 102, 102, 102),
                     fontSize: 12,
                     fontFamily: 'Poppins',
                     fontWeight: FontWeight.normal,
@@ -144,12 +145,19 @@ class VerifScreen extends StatelessWidget {
                   width: 313,
                   height: 49,
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) {
+                          return IdverifyWidget();
+                        }),
+                      );
+                    },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Color.fromARGB(255, 0, 0, 0),
                     ),
                     child: const Text(
-                      'CONTINUER',
+                      'ENVOYER',
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 15,
