@@ -48,7 +48,8 @@ class IdverifyWidget2 extends StatelessWidget {
               ),
               Positioned(
                   top: 569,
-                  left: 46,
+                  left: ScreenWidth / 2 - 120,
+                  width: 250,
                   child: Text(
                     'Placer votre visage découvert dans le cadre ',
                     textAlign: TextAlign.center,

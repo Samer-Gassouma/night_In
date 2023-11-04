@@ -27,7 +27,7 @@ class CustomButton extends StatelessWidget {
         },
         child: Container(
           width: 332,
-          height: 42,
+          height: 40,
           decoration: BoxDecoration(
             border: Border.all(
               color: Colors.black, // Set the border color here
@@ -37,8 +37,11 @@ class CustomButton extends StatelessWidget {
           ),
           child: Row(
             children: <Widget>[
+              const SizedBox(width: 12),
               if (iconPath != null) Image.asset(iconPath!),
-              const SizedBox(width: 8), // Add some space between icon and text
+              const SizedBox(
+                  width:
+                      12), // Increase the width to move the icon to the right
               Text(
                 title,
                 textAlign: TextAlign.left,
@@ -53,6 +56,7 @@ class CustomButton extends StatelessWidget {
               ),
               const Spacer(),
               Image.asset('assets/images/Vector.png'),
+              const SizedBox(width: 12),
             ],
           ),
         ),

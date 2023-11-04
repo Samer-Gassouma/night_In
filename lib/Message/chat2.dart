@@ -14,7 +14,6 @@ class _ChatState extends State<Chat> {
         type: MaterialType.transparency,
         child: Scaffold(
             body: Center(
-                // Center added here
                 child: Stack(children: <Widget>[
           Scaffold(
               resizeToAvoidBottomInset: false,
@@ -323,12 +322,6 @@ class _ChatState extends State<Chat> {
                                   width: 224,
                                   height: 74,
                                   decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.only(
-                                      topLeft: Radius.circular(15),
-                                      topRight: Radius.circular(15),
-                                      bottomLeft: Radius.circular(15),
-                                      bottomRight: Radius.circular(0),
-                                    ),
                                     color: Color.fromRGBO(225, 229, 230, 1),
                                   ))),
                           Positioned(
@@ -444,98 +437,6 @@ class _ChatState extends State<Chat> {
                                             ),
                                           ),
                                         )),
-                                  ]))),
-                          Positioned(
-                              top: 2,
-                              left: 263,
-                              child: Container(
-                                  width: 52,
-                                  height: 52,
-                                  child: Stack(children: <Widget>[
-                                    Positioned(
-                                        top: 0,
-                                        left: 0,
-                                        child: Container(
-                                            width: 52,
-                                            height: 52,
-                                            child: Stack(children: <Widget>[
-                                              Positioned(
-                                                  top: 0,
-                                                  left: 0,
-                                                  child: Container(
-                                                      width: 52,
-                                                      height: 52,
-                                                      decoration: BoxDecoration(
-                                                        borderRadius:
-                                                            BorderRadius.only(
-                                                          topLeft:
-                                                              Radius.circular(
-                                                                  15),
-                                                          topRight:
-                                                              Radius.circular(
-                                                                  15),
-                                                          bottomLeft:
-                                                              Radius.circular(
-                                                                  15),
-                                                          bottomRight:
-                                                              Radius.circular(
-                                                                  15),
-                                                        ),
-                                                        color: Color.fromRGBO(
-                                                            255, 255, 255, 1),
-                                                        border: Border.all(
-                                                          color: Color.fromRGBO(
-                                                              232, 230, 234, 1),
-                                                          width: 1,
-                                                        ),
-                                                      ))),
-                                            ]))),
-                                  ]))),
-                          Positioned(
-                              top: 2,
-                              left: 202,
-                              child: Container(
-                                  width: 52,
-                                  height: 52,
-                                  child: Stack(children: <Widget>[
-                                    Positioned(
-                                        top: 0,
-                                        left: 0,
-                                        child: Container(
-                                            width: 52,
-                                            height: 52,
-                                            child: Stack(children: <Widget>[
-                                              Positioned(
-                                                  top: 0,
-                                                  left: 0,
-                                                  child: Container(
-                                                      width: 52,
-                                                      height: 52,
-                                                      decoration: BoxDecoration(
-                                                        borderRadius:
-                                                            BorderRadius.only(
-                                                          topLeft:
-                                                              Radius.circular(
-                                                                  15),
-                                                          topRight:
-                                                              Radius.circular(
-                                                                  15),
-                                                          bottomLeft:
-                                                              Radius.circular(
-                                                                  15),
-                                                          bottomRight:
-                                                              Radius.circular(
-                                                                  15),
-                                                        ),
-                                                        color: Color.fromRGBO(
-                                                            255, 255, 255, 1),
-                                                        border: Border.all(
-                                                          color: Color.fromRGBO(
-                                                              232, 230, 234, 1),
-                                                          width: 1,
-                                                        ),
-                                                      ))),
-                                            ]))),
                                   ]))),
                         ]))),
                 Positioned(

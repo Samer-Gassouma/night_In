@@ -172,7 +172,7 @@ class CompteWidget extends StatelessWidget {
                             left: 0,
                             child: TextButton(
                               child: Container(
-                                  width: Screenwidth - 60,
+                                  width: Screenwidth - 40,
                                   height: 40,
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.only(
@@ -189,7 +189,7 @@ class CompteWidget extends StatelessWidget {
                             )),
                         Positioned(
                             top: 129,
-                            left: 274,
+                            left: 244,
                             child: TextButton(
                               child: Text(
                                 Language,
@@ -278,7 +278,7 @@ class CompteWidget extends StatelessWidget {
                             )),
                         Positioned(
                             top: 190,
-                            left: 264,
+                            left: 254,
                             child: TextButton(
                               child: Text(
                                 Gender,
@@ -339,6 +339,23 @@ class CompteWidget extends StatelessWidget {
                                 ))),
                         Positioned(
                             top: 205,
+                            left: 45,
+                            child: Container(
+                                width: 334,
+                                height: 32,
+                                child: Stack(children: <Widget>[
+                                  Positioned(
+                                      top: 10,
+                                      left: 310,
+                                      child: Transform.rotate(
+                                          angle: 179.99999611271772 *
+                                              (math.pi / 90),
+                                          child: Image.asset(
+                                            'assets/images/Vector.png',
+                                          ))),
+                                ]))),
+                        Positioned(
+                            top: 145,
                             left: 45,
                             child: Container(
                                 width: 334,
@@ -449,7 +466,7 @@ void showGender(BuildContext context, String gender) {
             Navigator.of(context).pop();
             gender = _.toString();
           },
-          hint: Text('Select gender'),
+          hint: const Text('Select gender'),
         ),
       );
     },

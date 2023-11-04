@@ -61,7 +61,6 @@ class ProfileWidget extends StatelessWidget {
         type: MaterialType.transparency,
         child: Scaffold(
             body: Center(
-          // Center added here
           child: Stack(
             children: <Widget>[
               SingleChildScrollView(

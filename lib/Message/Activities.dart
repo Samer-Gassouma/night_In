@@ -29,7 +29,7 @@ class Active extends StatelessWidget {
     return Container(
       width: 66,
       height: 128,
-      margin: EdgeInsets.only(right: 10), // Adjust spacing between items
+      margin: EdgeInsets.only(right: 10),
       child: Stack(
         children: <Widget>[
           Positioned(

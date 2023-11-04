@@ -233,8 +233,8 @@ class TransformWidget extends StatelessWidget {
                                       ))),
                             ]))),
                     Positioned(
-                        top: 450,
-                        left: 54,
+                        top: 455,
+                        left: 56,
                         child: Text(
                           '2',
                           textAlign: TextAlign.center,
@@ -247,7 +247,7 @@ class TransformWidget extends StatelessWidget {
                               height: 1),
                         )),
                     Positioned(
-                        top: 450,
+                        top: 455,
                         left: 130,
                         child: Text(
                           '5',
@@ -261,8 +261,8 @@ class TransformWidget extends StatelessWidget {
                               height: 1),
                         )),
                     Positioned(
-                        top: 450,
-                        left: 206,
+                        top: 455,
+                        left: 212,
                         child: Text(
                           '0',
                           textAlign: TextAlign.center,
@@ -275,8 +275,8 @@ class TransformWidget extends StatelessWidget {
                               height: 1),
                         )),
                     Positioned(
-                        top: 450,
-                        left: 282,
+                        top: 455,
+                        left: 287,
                         child: Text(
                           '0',
                           textAlign: TextAlign.center,
