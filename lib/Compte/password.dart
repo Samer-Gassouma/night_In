@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'verif.dart';
+import '../backBtn.dart';
 
 class PasswordScreen extends StatefulWidget {
   const PasswordScreen({super.key});
@@ -30,6 +31,7 @@ class _PasswordScreenState extends State<PasswordScreen> {
                 ),
               ),
             ),
+            BackBtn(),
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -197,31 +199,33 @@ class _PasswordScreenState extends State<PasswordScreen> {
                       const SizedBox(
                         height: 170,
                       ),
-                      ClipRRect(
-                        borderRadius:
-                            const BorderRadius.all(Radius.circular(10)),
-                        child: SizedBox(
-                          width: 313,
-                          height: 49,
-                          child: ElevatedButton(
-                            onPressed: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => const VerifScreen()),
-                              );
-                            },
-                            style: ElevatedButton.styleFrom(
-                              backgroundColor:
-                                  const Color.fromARGB(255, 0, 0, 0),
-                            ),
-                            child: const Text(
-                              'CONTINUER',
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 15,
-                                fontFamily: 'Poppins',
-                                fontWeight: FontWeight.w500,
+                      Center(
+                        child: ClipRRect(
+                          borderRadius:
+                              const BorderRadius.all(Radius.circular(10)),
+                          child: SizedBox(
+                            width: 343,
+                            height: 49,
+                            child: ElevatedButton(
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => VerifScreen(),
+                                  ),
+                                );
+                              },
+                              style: ElevatedButton.styleFrom(
+                                backgroundColor: Color.fromARGB(255, 0, 0, 0),
+                              ),
+                              child: const Text(
+                                'CONTINUER',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 15,
+                                  fontFamily: 'Poppins',
+                                  fontWeight: FontWeight.w500,
+                                ),
                               ),
                             ),
                           ),

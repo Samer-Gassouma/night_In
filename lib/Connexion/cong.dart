@@ -61,12 +61,12 @@ class CongScreen extends StatelessWidget {
                       backgroundColor: Color.fromARGB(255, 0, 0, 0),
                     ),
                     child: Text(
-                      'Suivant',
+                      'SUIVANT',
                       style: TextStyle(
                         color: Colors.white,
-                        fontSize: 15,
-                        fontFamily: 'Poppins',
-                        fontWeight: FontWeight.w500,
+                        fontSize: 17,
+                        fontFamily: 'Montserrat',
+                        fontWeight: FontWeight.bold,
                       ),
                     ),
                   ),

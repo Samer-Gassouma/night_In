@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'otp.dart';
+import '../backBtn.dart';
 
 class SingUpScreen extends StatefulWidget {
   const SingUpScreen({super.key});
@@ -31,6 +32,7 @@ class _SingUpScreenState extends State<SingUpScreen> {
                 ),
               ),
             ),
+            BackBtn(),
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [

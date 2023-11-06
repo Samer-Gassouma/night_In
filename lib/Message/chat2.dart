@@ -10,6 +10,7 @@ class Chat extends StatefulWidget {
 class _ChatState extends State<Chat> {
   @override
   Widget build(BuildContext context) {
+    double screenWidth = MediaQuery.of(context).size.width;
     return Material(
         type: MaterialType.transparency,
         child: Scaffold(
@@ -22,12 +23,12 @@ class _ChatState extends State<Chat> {
                   top: 730,
                   left: 48,
                   child: Container(
-                    width: 295,
+                    width: screenWidth,
                     height: 48,
                     child: Row(
                       children: [
                         Container(
-                          width: 232,
+                          width: screenWidth,
                           height: 48,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(15),
@@ -68,7 +69,7 @@ class _ChatState extends State<Chat> {
                     top: 261,
                     left: 40,
                     child: Container(
-                        width: 250,
+                        width: screenWidth,
                         height: 117,
                         child: Stack(children: <Widget>[
                           Positioned(

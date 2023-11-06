@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'dart:math' as math;
 import 'accepted.dart';
 //import 'rejected.dart';
+import '../backBtn.dart';
 
 class CompteWidget extends StatelessWidget {
   @override
@@ -30,7 +31,8 @@ class CompteWidget extends StatelessWidget {
                   child: Stack(children: <Widget>[
                     Positioned(
                         top: 30,
-                        left: 23,
+                        left: 0,
+                        right: 0,
                         child: Text(
                           'Paiement',
                           textAlign: TextAlign.center,
@@ -39,9 +41,10 @@ class CompteWidget extends StatelessWidget {
                               fontFamily: 'Poppins',
                               fontSize: 32.06106948852539,
                               letterSpacing: 0.16030535101890564,
-                              fontWeight: FontWeight.normal,
+                              fontWeight: FontWeight.bold,
                               height: 1.7000000118982221),
                         )),
+                    BackBtn(),
                     Positioned(
                         top: 132,
                         left: 25,

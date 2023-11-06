@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'dart:math' as math;
 import 'matches.dart';
+import '../../backBtn.dart';
 
 class PageWidget extends StatelessWidget {
   @override
@@ -46,6 +47,7 @@ class PageWidget extends StatelessWidget {
                                 fit: BoxFit.fitWidth),
                           )),
                     ),
+                    BackBtn(),
                     Positioned(
                         top: 130.03126525878906,
                         left: 36.686527252197266,

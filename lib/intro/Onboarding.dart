@@ -96,8 +96,8 @@ class Onboarding1Widget extends StatelessWidget {
                 if (indexLoad >= 0 && indexLoad <= 2)
                   Positioned(
                     top: 750,
-                    left: 140 + (indexLoad * 20),
-                    right: 120,
+                    left: 120 + (indexLoad * 40),
+                    right: 170,
                     child: Container(
                       width: 130,
                       height: 6,

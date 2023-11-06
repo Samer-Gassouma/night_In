@@ -117,7 +117,7 @@ class ChatBubble extends StatelessWidget {
                       fontFamily: 'Montserrat',
                       fontSize: 14,
                       letterSpacing: 0,
-                      fontWeight: FontWeight.normal,
+                      fontWeight: FontWeight.bold,
                       height: 1.5,
                     ),
                   ),

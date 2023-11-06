@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'IDVerify2.dart';
+import '../backBtn.dart';
 
 class IdverifyWidget extends StatelessWidget {
   @override
@@ -60,6 +61,7 @@ class IdverifyWidget extends StatelessWidget {
                         fontWeight: FontWeight.normal,
                         height: 1),
                   )),
+              BackBtn(),
               Positioned(
                   top: 569,
                   left: 46,

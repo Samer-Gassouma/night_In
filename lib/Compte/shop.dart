@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'transform.dart';
+import '../backBtn.dart';
 
 class ShopWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width;
+    double height = MediaQuery.of(context).size.height * .8;
     return Material(
         type: MaterialType.transparency,
         child: Scaffold(
@@ -32,6 +35,7 @@ class ShopWidget extends StatelessWidget {
                               fontWeight: FontWeight.normal,
                               height: 1),
                         )),
+                    BackBtn(),
                     Positioned(
                         top: 166,
                         left: 314,
@@ -41,6 +45,12 @@ class ShopWidget extends StatelessWidget {
                           decoration: BoxDecoration(
                             color: Color.fromRGBO(255, 255, 255, 1),
                           ),
+                        )),
+                    Positioned(
+                        top: 166,
+                        right: 25,
+                        child: Image.asset(
+                          'assets/images/nav1.png',
                         )),
                     Positioned(
                         top: 75,
@@ -102,8 +112,7 @@ class ShopWidget extends StatelessWidget {
                                                             fontSize: 32,
                                                             letterSpacing: 0,
                                                             fontWeight:
-                                                                FontWeight
-                                                                    .normal,
+                                                                FontWeight.bold,
                                                             height: 1.5),
                                                       )),
                                                 ]))),

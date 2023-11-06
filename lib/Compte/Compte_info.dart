@@ -2,14 +2,15 @@ import 'package:flutter/material.dart';
 import 'dart:math' as math;
 import 'Date.dart';
 import 'my_profile.dart';
+import '../backBtn.dart';
 
 class CompteWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double Screenwidth = MediaQuery.of(context).size.width;
     double Screenheight = MediaQuery.of(context).size.height;
-    String Gender = 'Ajouter un sexe';
-    String Language = 'Ajouter une langue';
+    String Gender = 'Ajouter';
+    String Language = 'Ajouter';
 
     return Material(
         type: MaterialType.transparency,
@@ -46,34 +47,53 @@ class CompteWidget extends StatelessWidget {
                         fontWeight: FontWeight.normal,
                         height: 1.7),
                   )),
-              Positioned(
-                  top: 67,
-                  left: 106,
-                  child: Text(
-                    'Modifier',
-                    textAlign: TextAlign.left,
-                    style: TextStyle(
+              BackBtn(),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  SizedBox(height: 160),
+                  Positioned(
+                    top: 7,
+                    left: 106,
+                    child: Text(
+                      'Modifier',
+                      textAlign: TextAlign.left,
+                      style: TextStyle(
                         color: Color.fromRGBO(0, 0, 0, 1),
                         fontFamily: 'Poppins',
                         fontSize: 15,
                         letterSpacing: 0.10000000149011612,
-                        fontWeight: FontWeight.normal,
-                        height: 2.2666666666666666),
-                  )),
-              Positioned(
-                  top: 67,
-                  left: 227,
-                  child: Text(
-                    'Apperçus',
-                    textAlign: TextAlign.left,
-                    style: TextStyle(
+                        fontWeight: FontWeight.w500,
+                        height: 2.2666666666666666,
+                      ),
+                    ),
+                  ),
+                  Container(
+                    height: 30, // Adjust the height as needed
+                    child: VerticalDivider(
+                      color: Color.fromRGBO(151, 151, 151, 1),
+                      thickness: 1,
+                      width: 20, // Adjust the width of the line
+                    ),
+                  ),
+                  Positioned(
+                    top: 67,
+                    left: 227,
+                    child: Text(
+                      'Apperçus',
+                      textAlign: TextAlign.left,
+                      style: TextStyle(
                         color: Color.fromRGBO(151, 151, 151, 1),
                         fontFamily: 'Poppins',
                         fontSize: 15,
                         letterSpacing: 0.10000000149011612,
-                        fontWeight: FontWeight.normal,
-                        height: 2.2666666666666666),
-                  )),
+                        fontWeight: FontWeight.w500,
+                        height: 2.2666666666666666,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
               Positioned(
                   top: 100,
                   left: 30,
@@ -154,7 +174,7 @@ class CompteWidget extends StatelessWidget {
                       height: Screenheight,
                       child: Stack(children: <Widget>[
                         Positioned(
-                            top: 81,
+                            top: 71,
                             left: 1,
                             child: Text(
                               'Mes langues',
@@ -168,12 +188,12 @@ class CompteWidget extends StatelessWidget {
                                   height: 2.2666666666666666),
                             )),
                         Positioned(
-                            top: 130,
+                            top: 105,
                             left: 0,
                             child: TextButton(
                               child: Container(
-                                  width: Screenwidth - 40,
-                                  height: 40,
+                                  width: 332,
+                                  height: 32,
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.only(
                                       topLeft: Radius.circular(10),
@@ -188,8 +208,8 @@ class CompteWidget extends StatelessWidget {
                               },
                             )),
                         Positioned(
-                            top: 129,
-                            left: 244,
+                            top: 98,
+                            left: 254,
                             child: TextButton(
                               child: Text(
                                 Language,
@@ -227,8 +247,8 @@ class CompteWidget extends StatelessWidget {
                             left: 0,
                             child: TextButton(
                               child: Container(
-                                  width: Screenwidth - 60,
-                                  height: 40,
+                                  width: 332,
+                                  height: 32,
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.only(
                                       topLeft: Radius.circular(10),
@@ -243,7 +263,7 @@ class CompteWidget extends StatelessWidget {
                               },
                             )),
                         Positioned(
-                            top: 162,
+                            top: 142,
                             left: 1,
                             child: Text(
                               'Sexe',
@@ -257,12 +277,12 @@ class CompteWidget extends StatelessWidget {
                                   height: 2.2666666666666666),
                             )),
                         Positioned(
-                            top: 200,
+                            top: 170,
                             left: 0,
                             child: TextButton(
                               child: Container(
-                                  width: Screenwidth - 60,
-                                  height: 40,
+                                  width: 332,
+                                  height: 32,
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.only(
                                       topLeft: Radius.circular(10),
@@ -277,7 +297,7 @@ class CompteWidget extends StatelessWidget {
                               },
                             )),
                         Positioned(
-                            top: 190,
+                            top: 162,
                             left: 254,
                             child: TextButton(
                               child: Text(
@@ -296,7 +316,7 @@ class CompteWidget extends StatelessWidget {
                               },
                             )),
                         Positioned(
-                            top: 243,
+                            top: 205,
                             left: 3,
                             child: Text(
                               'Date de naissance',
@@ -310,11 +330,11 @@ class CompteWidget extends StatelessWidget {
                                   height: 2.2666666666666666),
                             )),
                         Positioned(
-                            top: 300,
-                            left: 0,
+                            top: 250,
+                            left: 5,
                             child: Container(
-                                width: Screenwidth - 60,
-                                height: 40,
+                                width: 332,
+                                height: 32,
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.only(
                                     topLeft: Radius.circular(10),
@@ -325,21 +345,21 @@ class CompteWidget extends StatelessWidget {
                                   color: Color.fromRGBO(240, 242, 244, 1),
                                 ))),
                         Positioned(
-                          top: 290,
+                          top: 238,
                           left: 184,
                           child: DatePickerExample(),
                         ),
                         Positioned(
-                            top: 313,
-                            left: 324,
+                            top: 260,
+                            left: 310,
                             child: Transform.rotate(
                                 angle: 179.99999611271772 * (math.pi / 90),
                                 child: Image.asset(
                                   'assets/images/Vector.png',
                                 ))),
                         Positioned(
-                            top: 205,
-                            left: 45,
+                            top: 178,
+                            left: 0,
                             child: Container(
                                 width: 334,
                                 height: 32,
@@ -355,8 +375,8 @@ class CompteWidget extends StatelessWidget {
                                           ))),
                                 ]))),
                         Positioned(
-                            top: 145,
-                            left: 45,
+                            top: 115,
+                            left: 0,
                             child: Container(
                                 width: 334,
                                 height: 32,

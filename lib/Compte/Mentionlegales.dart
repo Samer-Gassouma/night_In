@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'CustomBtn.dart';
+import '../backBtn.dart';
 
 class MentionlegalesWidget extends StatelessWidget {
   const MentionlegalesWidget({Key? key});
@@ -24,6 +25,7 @@ class MentionlegalesWidget extends StatelessWidget {
                   ),
                 ),
               ),
+              BackBtn(),
               Positioned(
                 top: 140,
                 left: 25,

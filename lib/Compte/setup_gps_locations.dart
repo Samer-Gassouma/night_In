@@ -24,7 +24,7 @@ class SetupScreen extends StatelessWidget {
               Positioned(
                 left: 0, // Set left to 0
                 right: 0, // Set right to 0
-                height: 264,
+                height: 294,
                 top: 445,
                 child: Container(
                   padding: const EdgeInsets.all(20),
@@ -39,16 +39,18 @@ class SetupScreen extends StatelessWidget {
                         'Bienvenue,',
                         style: TextStyle(
                           fontSize: 34,
+                          fontFamily: 'Montserrat',
                           fontWeight: FontWeight.bold,
                         ),
                       ),
                       const SizedBox(height: 20),
                       const Text(
-                        'Partagez-nous votre localisation pour améliorer nos services',
+                        'Partagez nous votre localisation pour améliorer nos services',
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           fontSize: 17,
-                          fontWeight: FontWeight.normal,
+                          fontFamily: 'ABeeZee',
+                          fontWeight: FontWeight.w400,
                         ),
                       ),
                       const SizedBox(height: 30),
@@ -70,19 +72,32 @@ class SetupScreen extends StatelessWidget {
                           ),
                           minimumSize: const Size(304, 50),
                         ),
-                        child: const Row(
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment
+                              .center, // Center content in the row
                           children: [
                             Image(image: AssetImage('assets/images/Path.png')),
                             SizedBox(width: 5),
-                            Text('Partager ma localisation'),
+                            Text('Partager ma localisation',
+                                style: TextStyle(
+                                  fontSize: 17,
+                                  fontFamily: 'ABeeZee',
+                                  fontWeight: FontWeight.w400,
+                                  fontStyle: FontStyle.italic,
+                                  wordSpacing: 0.36,
+                                )),
                           ],
                         ),
                       ),
-                      const SizedBox(height: 25),
+                      const SizedBox(height: 30),
                       const Text(
                         'Je le fais manuellement',
                         style: TextStyle(
                           color: Color.fromARGB(255, 0, 0, 0),
+                          fontSize: 17,
+                          fontFamily: 'ABeeZee',
+                          fontWeight: FontWeight.w400,
+                          decoration: TextDecoration.underline,
                         ),
                       ),
                     ],

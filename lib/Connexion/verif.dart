@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'IDVerify.dart';
+import '../backBtn.dart';
 
 class VerifScreen extends StatelessWidget {
   const VerifScreen({Key? key});
@@ -22,8 +23,9 @@ class VerifScreen extends StatelessWidget {
               ),
             ),
           ),
+          BackBtn(),
           Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const SizedBox(height: 160),
               const Padding(
@@ -41,10 +43,8 @@ class VerifScreen extends StatelessWidget {
               ),
               const SizedBox(height: 24),
               SizedBox(height: 20),
-
-              //button with text Envoyer ma pièce d’intenté , the text black and the button white and the border black
-              ClipRRect(
-                borderRadius: const BorderRadius.all(Radius.circular(8)),
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 30),
                 child: SizedBox(
                   width: 280,
                   height: 49,
@@ -82,8 +82,8 @@ class VerifScreen extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 25),
-              ClipRRect(
-                borderRadius: const BorderRadius.all(Radius.circular(8)),
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 30),
                 child: SizedBox(
                   width: 180,
                   height: 49,
@@ -110,7 +110,7 @@ class VerifScreen extends StatelessWidget {
               const Padding(
                 padding: EdgeInsets.symmetric(horizontal: 30),
                 child: Text(
-                  'Il faut que :',
+                  'Il faut que :\n-le visage soit découvert\n-pas de filtres ou d’effets\n-pas de lunettes ou d’objets',
                   textAlign: TextAlign.left,
                   style: TextStyle(
                     color: Color.fromARGB(255, 102, 102, 102),
@@ -120,13 +120,9 @@ class VerifScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              Text('-le visage soit découvert'),
-              Text('-pas de filtres ou d’effets'),
-              Text('-pas de lunettes ou d’objets'),
-
               SizedBox(height: 30),
               const Padding(
-                padding: EdgeInsets.symmetric(horizontal: 30),
+                padding: EdgeInsets.symmetric(horizontal: 40),
                 child: Text(
                   'Ces documents sont utilisés dans le cadre de la vérification  de vos informations. Afin de vous garantire une sécurité lors de l’utilisation de l’application.',
                   textAlign: TextAlign.center,
@@ -134,40 +130,44 @@ class VerifScreen extends StatelessWidget {
                     color: Color(0xFF393939),
                     fontSize: 12,
                     fontFamily: 'Montserrat',
-                    fontWeight: FontWeight.normal,
+                    fontWeight: FontWeight.bold,
                   ),
                 ),
               ),
-              const SizedBox(height: 150),
-              ClipRRect(
-                borderRadius: const BorderRadius.all(Radius.circular(10)),
-                child: SizedBox(
-                  width: 313,
-                  height: 49,
-                  child: ElevatedButton(
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) {
-                          return IdverifyWidget();
-                        }),
-                      );
-                    },
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Color.fromARGB(255, 0, 0, 0),
-                    ),
-                    child: const Text(
-                      'ENVOYER',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 15,
-                        fontFamily: 'Poppins',
-                        fontWeight: FontWeight.w500,
+              Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                const SizedBox(height: 150),
+                Center(
+                  child: ClipRRect(
+                    borderRadius: const BorderRadius.all(Radius.circular(10)),
+                    child: SizedBox(
+                      width: 313,
+                      height: 49,
+                      child: ElevatedButton(
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) {
+                              return IdverifyWidget();
+                            }),
+                          );
+                        },
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Color.fromARGB(255, 0, 0, 0),
+                        ),
+                        child: const Text(
+                          'ENVOYER',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 15,
+                            fontFamily: 'Poppins',
+                            fontWeight: FontWeight.w500,
+                          ),
+                        ),
                       ),
                     ),
                   ),
-                ),
-              ),
+                )
+              ]),
             ],
           ),
         ],

@@ -16,16 +16,28 @@ class MyBottomNavigationBar extends StatelessWidget {
       right: 0,
       child: Container(
         width: MediaQuery.of(context).size.width,
-        height: 109,
+        height: 85,
         child: Stack(
           children: <Widget>[
+            Container(
+              width: MediaQuery.of(context).size.width,
+              height: 25,
+              decoration: BoxDecoration(
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withOpacity(0.3),
+                    blurRadius: 10,
+                  ),
+                ],
+              ),
+            ),
             Positioned(
               bottom: 0,
               left: 0,
               right: 0,
               child: SizedBox(
                 width: MediaQuery.of(context).size.width,
-                height: 65,
+                height: 75,
                 child: Stack(
                   children: <Widget>[
                     Positioned(
@@ -48,7 +60,7 @@ class MyBottomNavigationBar extends StatelessWidget {
                       ),
                     ),
                     Positioned(
-                      top: 0,
+                      top: 10,
                       left: 0,
                       right: 0,
                       child: SizedBox(

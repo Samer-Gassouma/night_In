@@ -1,8 +1,51 @@
 import 'package:flutter/material.dart';
 import 'dart:math' as math;
+import '../backBtn.dart';
 
 class ProfileWidget1 extends StatelessWidget {
   const ProfileWidget1({super.key});
+  void _showAppList(BuildContext context) {
+    showModalBottomSheet(
+      context: context,
+      builder: (BuildContext context) {
+        return Material(
+            type: MaterialType.transparency,
+            child: SizedBox(
+              height: 100,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  _buildAppItem('assets/images/fb.png', 'Facebook'),
+                  _buildAppItem('assets/images/insta.png', 'Instagram'),
+                  _buildAppItem('assets/images/snap.png', 'Snapchat'),
+                  _buildAppItem('assets/images/sms.png', 'SMS'),
+                  _buildAppItem('assets/images/msg.png', 'Messenger'),
+                ],
+              ),
+            ));
+      },
+    );
+  }
+
+  Widget _buildAppItem(String iconPath, String appName) {
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Image.asset(
+          iconPath,
+          width: 50,
+          height: 50,
+        ),
+        Text(
+          appName,
+          style: TextStyle(
+            fontSize: 14,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+      ],
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -44,6 +87,7 @@ class ProfileWidget1 extends StatelessWidget {
                                     fit: BoxFit.fitWidth),
                               )),
                         )),
+                    BackBtn(),
                     Positioned(
                         top: 368,
                         left: 0,
@@ -166,13 +210,18 @@ class ProfileWidget1 extends StatelessWidget {
                                         fontWeight: FontWeight.w400,
                                         height: 1.5),
                                   )),
-                              const Positioned(
+                              Positioned(
                                 top: 20,
                                 right: 17,
-                                child: Image(
-                                  image: AssetImage('assets/images/send.png'),
-                                  width: 20,
-                                  height: 20,
+                                child: GestureDetector(
+                                  onTap: () {
+                                    _showAppList(context);
+                                  },
+                                  child: Image(
+                                    image: AssetImage('assets/images/send.png'),
+                                    width: 20,
+                                    height: 20,
+                                  ),
                                 ),
                               )
                             ]))),
@@ -425,6 +474,20 @@ class ProfileWidget1 extends StatelessWidget {
                                   left: 217,
                                   child: Text(
                                     'Abigail',
+                                    textAlign: TextAlign.left,
+                                    style: TextStyle(
+                                        color: Color.fromRGBO(0, 0, 0, 1),
+                                        fontFamily: 'Montserrat',
+                                        fontSize: 11,
+                                        letterSpacing: 0,
+                                        fontWeight: FontWeight.normal,
+                                        height: 1.5),
+                                  )),
+                              const Positioned(
+                                  top: 95,
+                                  left: 35,
+                                  child: Text(
+                                    'Personne super sympa.',
                                     textAlign: TextAlign.left,
                                     style: TextStyle(
                                         color: Color.fromRGBO(0, 0, 0, 1),

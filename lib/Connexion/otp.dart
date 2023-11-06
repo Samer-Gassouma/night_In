@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'verif.dart';
+import '../backBtn.dart';
 
 class OTPScreen extends StatelessWidget {
   const OTPScreen({Key? key});
@@ -22,6 +23,7 @@ class OTPScreen extends StatelessWidget {
               ),
             ),
           ),
+          BackBtn(),
           Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'IDVerify3.dart';
+import '../backBtn.dart';
 
 class IdverifyWidget2 extends StatelessWidget {
   @override
@@ -36,6 +37,7 @@ class IdverifyWidget2 extends StatelessWidget {
                         fontWeight: FontWeight.normal,
                         height: 1),
                   )),
+              BackBtn(),
               GestureDetector(
                 onTap: () {
                   Navigator.push(

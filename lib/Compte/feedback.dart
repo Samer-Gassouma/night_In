@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'Mentionlegales.dart';
+import '../backBtn.dart';
 
 class NoterlappWidget extends StatefulWidget {
   const NoterlappWidget({Key? key}) : super(key: key);
@@ -80,6 +81,7 @@ class _NoterlappWidgetState extends State<NoterlappWidget> {
                     ),
                   ),
                 ),
+                BackBtn(),
                 Positioned(
                   top: 707,
                   left: 31,

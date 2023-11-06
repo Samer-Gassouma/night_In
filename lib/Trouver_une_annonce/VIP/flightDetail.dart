@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'dart:math' as math;
 import 'package:alpha/paiement/compte.dart';
+import '../../backBtn.dart';
 
 class FlightsWidget extends StatelessWidget {
   @override
@@ -49,6 +50,7 @@ class FlightsWidget extends StatelessWidget {
                                   image: AssetImage('assets/images/bg303.png'),
                                   fit: BoxFit.fitWidth),
                             ))),
+                    BackBtn(),
                     Positioned(
                         top: 275.4560546875,
                         left: -2,

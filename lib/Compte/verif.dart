@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'feedback.dart';
+import '../backBtn.dart';
 
 class VerifScreen extends StatelessWidget {
   const VerifScreen({Key? key});
@@ -23,6 +24,7 @@ class VerifScreen extends StatelessWidget {
                   ),
                 ),
               ),
+              BackBtn(),
               const Positioned(
                   top: 154,
                   left: 26,

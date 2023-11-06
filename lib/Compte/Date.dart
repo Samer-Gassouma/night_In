@@ -57,7 +57,7 @@ class _DatePickerExampleState extends State<DatePickerExample> {
       child: Text(
         '${date.month}-${date.day}-${date.year}',
         style: const TextStyle(
-          fontSize: 22.0,
+          fontSize: 20.0,
           color: CupertinoColors.black,
         ),
       ),

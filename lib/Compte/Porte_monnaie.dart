@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'shop.dart';
+import '../backBtn.dart';
 
 class PortemonnaieWidget extends StatelessWidget {
   @override
@@ -8,7 +9,6 @@ class PortemonnaieWidget extends StatelessWidget {
         type: MaterialType.transparency,
         child: Scaffold(
             body: Center(
-                // Center added here
                 child: Stack(children: <Widget>[
           SingleChildScrollView(
               child: Container(
@@ -38,6 +38,7 @@ class PortemonnaieWidget extends StatelessWidget {
                                             fit: BoxFit.fitWidth),
                                       ))),
                             ]))),
+                    BackBtn(),
                     Positioned(
                       top: 245,
                       left: 22,
@@ -95,7 +96,7 @@ class PortemonnaieWidget extends StatelessWidget {
                                         fontFamily: 'Montserrat',
                                         fontSize: 15,
                                         letterSpacing: 0,
-                                        fontWeight: FontWeight.normal,
+                                        fontWeight: FontWeight.w500,
                                         height: 1.5),
                                   )),
                             ]))),

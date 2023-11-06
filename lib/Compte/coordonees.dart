@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'password.dart';
+import '../backBtn.dart';
 
 class Corrd extends StatefulWidget {
   const Corrd({super.key});
@@ -22,7 +23,7 @@ class _CorrdState extends State<Corrd> {
                 child: Stack(
               children: [
                 Positioned(
-                  top: 20,
+                  top: 30,
                   left: 0,
                   right: 0,
                   child: Center(
@@ -33,6 +34,7 @@ class _CorrdState extends State<Corrd> {
                     ),
                   ),
                 ),
+                BackBtn(),
                 Positioned(
                   top: 120,
                   left: 25,
@@ -177,30 +179,34 @@ class _CorrdState extends State<Corrd> {
                           const SizedBox(
                             height: 400,
                           ),
-                          ClipRRect(
-                            borderRadius:
-                                const BorderRadius.all(Radius.circular(10)),
-                            child: SizedBox(
-                              width: 343,
-                              height: 49,
-                              child: ElevatedButton(
-                                onPressed: () {
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) => PasswordScreen()),
-                                  );
-                                },
-                                style: ElevatedButton.styleFrom(
-                                  backgroundColor: Color.fromARGB(255, 0, 0, 0),
-                                ),
-                                child: const Text(
-                                  'CONTINUER',
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 15,
-                                    fontFamily: 'Poppins',
-                                    fontWeight: FontWeight.w500,
+                          Center(
+                            child: ClipRRect(
+                              borderRadius:
+                                  const BorderRadius.all(Radius.circular(10)),
+                              child: SizedBox(
+                                width: 343,
+                                height: 49,
+                                child: ElevatedButton(
+                                  onPressed: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) => PasswordScreen(),
+                                      ),
+                                    );
+                                  },
+                                  style: ElevatedButton.styleFrom(
+                                    backgroundColor:
+                                        Color.fromARGB(255, 0, 0, 0),
+                                  ),
+                                  child: const Text(
+                                    'CONTINUER',
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 15,
+                                      fontFamily: 'Poppins',
+                                      fontWeight: FontWeight.w500,
+                                    ),
                                   ),
                                 ),
                               ),

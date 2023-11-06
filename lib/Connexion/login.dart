@@ -11,9 +11,9 @@ class LoginScreen extends StatefulWidget {
 class _LoginScreenState extends State<LoginScreen> {
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passController = TextEditingController();
-
   @override
   Widget build(BuildContext context) {
+    double screenwidth = MediaQuery.of(context).size.width;
     return Scaffold(
       body: Stack(
         children: [
@@ -65,7 +65,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   textAlign: TextAlign.center,
                   style: const TextStyle(
                     color: Color(0xFF898A8D),
-                    fontSize: 5,
+                    fontSize: 20,
                     fontFamily: 'Poppins',
                     fontWeight: FontWeight.w400,
                   ),
@@ -101,7 +101,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   textAlign: TextAlign.center,
                   style: const TextStyle(
                     color: Color(0xFF898A8D),
-                    fontSize: 5,
+                    fontSize: 15,
                     fontFamily: 'Poppins',
                     fontWeight: FontWeight.w400,
                   ),
@@ -171,8 +171,11 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
                 Row(
                   children: [
+                    SizedBox(
+                      width: screenwidth * 0.1,
+                    ),
                     const Text(
-                      'Pas encore memebre ? !',
+                      'Pas encore memebre ?',
                       style: TextStyle(
                         color: Color.fromARGB(255, 0, 0, 0),
                         fontSize: 13,
@@ -193,7 +196,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         );
                       },
                       child: const Text(
-                        'Rejoignez nous',
+                        'Rejoignez nous!',
                         style: TextStyle(
                           color: Color.fromARGB(255, 0, 0, 0),
                           fontSize: 13,

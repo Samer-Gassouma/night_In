@@ -174,7 +174,7 @@ class MessagesWidget extends StatelessWidget {
                                         color: Color.fromRGBO(
                                             0, 0, 0, 0.4000000059604645),
                                         fontFamily: 'Montserrat',
-                                        fontSize: 14,
+                                        fontSize: 15,
                                         letterSpacing: 0,
                                         fontWeight: FontWeight.normal,
                                         height: 1.5),

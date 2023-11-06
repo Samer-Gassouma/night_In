@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'dart:math' as math;
 import '../../Compte/navbar.dart';
 import 'matches.dart';
+import '../../backBtn.dart';
 
 class VipsWidget extends StatelessWidget {
   @override
@@ -45,6 +46,7 @@ class VipsWidget extends StatelessWidget {
                                   image: AssetImage('assets/images/Rec.png'),
                                   fit: BoxFit.fitWidth),
                             ))),
+                    BackBtn(),
                     Positioned(
                         top: 263,
                         left: -2,

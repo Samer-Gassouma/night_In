@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'confirm_transform.dart';
+import '../backBtn.dart';
 
 class TransformWidget extends StatelessWidget {
   const TransformWidget({super.key});
@@ -10,7 +11,6 @@ class TransformWidget extends StatelessWidget {
         type: MaterialType.transparency,
         child: Scaffold(
             body: Center(
-                // Center added here
                 child: Stack(children: <Widget>[
           SingleChildScrollView(
               child: Container(
@@ -41,6 +41,7 @@ class TransformWidget extends StatelessWidget {
                               fontWeight: FontWeight.normal,
                               height: 0.7333333333333333),
                         )),
+                    BackBtn(),
                     Positioned(
                         top: 172,
                         left: 54,
@@ -141,7 +142,7 @@ class TransformWidget extends StatelessWidget {
                               fontFamily: 'Montserrat',
                               fontSize: 17,
                               letterSpacing: 0,
-                              fontWeight: FontWeight.normal,
+                              fontWeight: FontWeight.w500,
                               height: 1),
                         )),
                     Positioned(

@@ -1,9 +1,40 @@
 import 'package:flutter/material.dart';
 import 'dart:math' as math;
+import '../backBtn.dart';
 
 class CompteWidget extends StatefulWidget {
   @override
   _CompteWidgetState createState() => _CompteWidgetState();
+}
+
+class OptionButton extends StatelessWidget {
+  final String label;
+  final bool isSelected;
+  final VoidCallback onTap;
+
+  OptionButton({
+    required this.label,
+    required this.isSelected,
+    required this.onTap,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: onTap,
+      child: Text(
+        label,
+        style: TextStyle(
+          color: isSelected ? Colors.black : Color.fromRGBO(151, 151, 151, 1),
+          fontFamily: 'Poppins',
+          fontSize: 24.05,
+          letterSpacing: 0.16,
+          fontWeight: FontWeight.w500,
+          height: 2.27,
+        ),
+      ),
+    );
+  }
 }
 
 class _CompteWidgetState extends State<CompteWidget> {
@@ -48,71 +79,42 @@ class _CompteWidgetState extends State<CompteWidget> {
                             height: 1.7000000118982221),
                       )),
                   SizedBox(height: 20),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      SizedBox(height: 260),
-                      GestureDetector(
-                        onTap: () {
-                          setState(() {
-                            isVIP = false;
-                          });
-                        },
-                        child: Text(
-                          'Personne',
-                          style: TextStyle(
-                            color: isVIP
-                                ? Color.fromRGBO(151, 151, 151, 1)
-                                : Colors.black,
-                            fontFamily: 'Poppins',
-                            fontSize: 24.05,
-                            letterSpacing: 0.16,
-                            fontWeight: FontWeight.w500,
-                            height: 2.27,
-                          ),
+                  BackBtn(),
+                  Container(
+                    margin: EdgeInsets.only(
+                      top: 100.0,
+                      right: 45,
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        OptionButton(
+                          label: 'Personne',
+                          isSelected: !isVIP,
+                          onTap: () {
+                            setState(() {
+                              isVIP = false;
+                            });
+                          },
                         ),
-                      ),
-                      SizedBox(width: 40),
-                      GestureDetector(
-                        onTap: () {
-                          setState(() {
-                            isVIP = true;
-                          });
-                        },
-                        child: Text(
-                          '|',
-                          style: TextStyle(
-                            color: Colors.black,
-                            fontFamily: 'Poppins',
-                            fontSize: 24.05,
-                            letterSpacing: 0.16,
-                            fontWeight: FontWeight.w500,
-                            height: 2.27,
-                          ),
+                        SizedBox(width: 40),
+                        OptionButton(
+                          label: '|',
+                          isSelected: false,
+                          onTap: () {},
                         ),
-                      ),
-                      SizedBox(width: 50),
-                      GestureDetector(
-                        onTap: () {
-                          setState(() {
-                            isVIP = true;
-                          });
-                        },
-                        child: Text(
-                          'VIP',
-                          style: TextStyle(
-                            color: isVIP
-                                ? Colors.black
-                                : Color.fromRGBO(151, 151, 151, 1),
-                            fontFamily: 'Poppins',
-                            fontSize: 24.05,
-                            letterSpacing: 0.16,
-                            fontWeight: FontWeight.w500,
-                            height: 2.27,
-                          ),
+                        SizedBox(width: 50),
+                        OptionButton(
+                          label: 'VIP',
+                          isSelected: isVIP,
+                          onTap: () {
+                            setState(() {
+                              isVIP = true;
+                            });
+                          },
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                   Positioned(
                       top: 170,

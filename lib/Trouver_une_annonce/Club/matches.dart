@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'FilltersPop.dart';
 import 'flightDetail.dart';
+import '../../backBtn.dart';
 
 class MatchesWidget extends StatelessWidget {
   @override
@@ -53,6 +54,7 @@ class MatchesWidget extends StatelessWidget {
                                         FillterBtn(),
                                       ]))),
                             ]))),
+                    BackBtn(),
                     Positioned(
                         top: 270,
                         left: 26.000244140625,

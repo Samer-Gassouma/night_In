@@ -355,8 +355,7 @@ class ProfileWidget extends StatelessWidget {
                           top: 611,
                           left: 22,
                           onTap: () {
-                            _showAppList(
-                                context); // Call the function to show app list
+                            _showAppList(context);
                           },
                         ),
                         CustomButton(

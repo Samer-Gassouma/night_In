@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../Compte/my_profile.dart';
 
 class ValidationWidget extends StatelessWidget {
   @override

@@ -5,6 +5,7 @@ import 'Club/main.dart';
 import 'dart:async';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 //import 'package:location/location.dart';
+import '../backBtn.dart';
 
 class Manger extends StatefulWidget {
   @override
@@ -31,10 +32,6 @@ class _MangerState extends State<Manger> {
           "Latitude: ${currentLocation.latitude} \nLongitude: ${currentLocation.longitude}";
     });
   }*/
-
-  printLocation() {
-    print(locationMessage);
-  }
 
   void _handlePersonneButtonTap() {
     setState(() {
@@ -108,7 +105,6 @@ class _MangerState extends State<Manger> {
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
     double screenHeight = MediaQuery.of(context).size.height;
-    printLocation();
     return SafeArea(
         child: Scaffold(
             resizeToAvoidBottomInset: false,
@@ -136,6 +132,7 @@ class _MangerState extends State<Manger> {
                           zoom: 11.0,
                         ),
                       ),
+                      BackBtn(),
                       Positioned(
                           top: 542,
                           left: 224,
@@ -467,7 +464,7 @@ class _MangerState extends State<Manger> {
                         ),
                       ),
                       Positioned(
-                          top: 59,
+                          top: 30,
                           left: 94,
                           child: Container(
                               width: 261,
@@ -532,8 +529,7 @@ class _MangerState extends State<Manger> {
                                               Color.fromRGBO(255, 255, 255, 1),
                                           fontFamily: 'Montserrat',
                                           fontSize: 20,
-                                          letterSpacing:
-                                              0 /*percentages not used in flutter. defaulting to zero*/,
+                                          letterSpacing: 0,
                                           fontWeight: FontWeight.normal,
                                           height: 1.5),
                                     )),
