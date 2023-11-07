@@ -4,6 +4,7 @@ import 'chat_bubble.dart';
 class Message extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    double ScreenWidth = MediaQuery.of(context).size.width;
     return Material(
         type: MaterialType.transparency,
         child: Scaffold(
@@ -11,7 +12,7 @@ class Message extends StatelessWidget {
                 // Center added here
                 child: Stack(children: <Widget>[
           Container(
-              width: 375,
+              width: ScreenWidth,
               height: 812,
               child: Stack(children: <Widget>[
                 Positioned(
