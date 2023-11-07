@@ -38,6 +38,7 @@ class ChatBubble extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double ScreenWidth = MediaQuery.of(context).size.width;
     return Positioned(
       top: top,
       left: left,
@@ -46,14 +47,14 @@ class ChatBubble extends StatelessWidget {
             _showMessage(context); // Call the function to show the message
           },
           child: Container(
-            width: width,
+            width: ScreenWidth,
             height: height,
             child: Stack(
               children: <Widget>[
                 if (unreadMessages > 0)
                   Positioned(
                       top: 23,
-                      left: 270,
+                      left: ScreenWidth / 1.3,
                       child: Container(
                           width: 20,
                           height: 20,
@@ -108,7 +109,7 @@ class ChatBubble extends StatelessWidget {
                   ),
                 Positioned(
                   top: 7,
-                  left: 66,
+                  left: 57,
                   child: Text(
                     name,
                     textAlign: TextAlign.left,
@@ -124,7 +125,7 @@ class ChatBubble extends StatelessWidget {
                 ),
                 Positioned(
                   top: 28,
-                  left: 66,
+                  left: 58,
                   child: Text(
                     message,
                     textAlign: TextAlign.left,
@@ -140,7 +141,7 @@ class ChatBubble extends StatelessWidget {
                 ),
                 Positioned(
                   top: 5,
-                  left: 251,
+                  left: ScreenWidth / 1.35,
                   child: Text(
                     duration,
                     textAlign: TextAlign.right,
@@ -172,7 +173,7 @@ class ChatBubble extends StatelessWidget {
                         ),
                         Positioned(
                           top: 4,
-                          left: 5,
+                          left: 0,
                           child: Container(
                             width: 46,
                             height: 46,

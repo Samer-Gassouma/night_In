@@ -120,8 +120,8 @@ class Onboarding1Widget extends StatelessWidget {
                   ),
                 Positioned(
                   top: 662,
-                  left: 0,
-                  right: 0,
+                  left: 102,
+                  right: 102,
                   child: GestureDetector(
                     onTap: onNextPressed,
                     child: SizedBox(
